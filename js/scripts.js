@@ -72,6 +72,7 @@ let counterLine;
 let timeValue = 15;
 let widthValue = 0;
 let userScore = 0;
+
 //if next button clicked
 next_btn.addEventListener('click', () => {
     if (question_count < questions.length - 1) {
@@ -127,7 +128,7 @@ function optionSelected(answer) {
     let allOptions = option_list.children.length;
     console.log(correctAnswer);
 
-    if (userAnswer == correctAnswer) {
+    if (userAnswer === correctAnswer) {
         userScore += 1;
         console.log(userScore);
         answer.classList.add("correct");
